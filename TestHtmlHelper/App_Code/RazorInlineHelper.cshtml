@@ -1,0 +1,21 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@using TestHtmlHelper.HtmlHelper
+
+@helper MyFirstRazorHelper()
+{
+    <p>Test Razor</p>
+}
+
+@helper YourGenericHelperFor(string propertyName, string value)
+{
+
+    <h1>@propertyName</h1><p>@value</p>
+}
+
+@helper YourGenericHelperPropertyConstructedFor(string propertyName, string value)
+{
+
+    <h1>@propertyName</h1><p>@value</p>
+    @Html.GetPageHelper().TextBox("Test")
+}

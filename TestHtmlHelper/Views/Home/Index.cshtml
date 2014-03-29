@@ -1,0 +1,27 @@
+﻿@model TestHtmlHelper.Models.MyModel
+@using TestHtmlHelper.HtmlHelper
+<div>
+    @Html.MyFirstHelper()
+</div>
+<div>
+    @Html.TextBoxFor(d => d.Name)
+</div>
+<div>
+    @Html.YourGenericHelperFor(d => d.Name)
+</div>
+<div>
+    @Html.YourGenericHelperPropertyConstructedFor(d => d.Name)
+</div>
+<hr/>
+<div>
+    @RazorInlineHelper.MyFirstRazorHelper()
+</div>
+<div>
+    @Html.TextBoxFor(d => d.Name)
+</div>
+<div>
+    @RazorInlineHelper.YourGenericHelperFor(@Html.DisplayNameFor(d=>d.Name).ToString(), @Model.Name)
+</div>
+<div>
+    @RazorInlineHelper.YourGenericHelperPropertyConstructedFor(@Html.DisplayNameFor(d => d.Name).ToString(), @Model.Name)
+</div>
